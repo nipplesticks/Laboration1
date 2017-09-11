@@ -31,7 +31,18 @@ int main()
 
     if (!isChild)
     {
+	int poo = 0;
+
         wait(NULL);
+	/*
+	while (1)
+	{
+		//std::cout << std::to_string(poo++) << std::endl;
+		//std::cout << "Hej" << std::endl;
+		poo++;
+	}
+	*/
+
 
         /*
         int time = -1;
@@ -46,13 +57,6 @@ int main()
             }
             */
     }
-
-
-  
-    
-
-
-
 
     return 0;
 }
