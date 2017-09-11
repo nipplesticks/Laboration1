@@ -6,8 +6,9 @@ int main()
 
     while (1)
     {
-        //std::cout << value++ << ", ";
-        value++;
+       // std::cout << value++ << std::endl;
+	//	  std::cout << 0 << std::endl;
+	value++;
     }
 
     value = 0;
