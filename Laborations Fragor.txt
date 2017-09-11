@@ -1,0 +1,10 @@
+4.1
+När linux startas så starts systemd. systemd är linuxs motsvarighet till Eva och Adam. 
+
+4.2 
+Fork() klonar sig själv. Det betyder att processen som skapas har exakt samma process-state 
+som föräldern. Fork() returnerar olika beroende på familjstatus. Fork() returnerar två värden
+föräldern får  barnets PID. 
+- PID: Process ID, unikt nummer för varje process.
+Barnet får retur värdet noll. 
+Det funkar på detta sätt för att föräldrar har ansvar för sina barn och ska veta vem de är. 
