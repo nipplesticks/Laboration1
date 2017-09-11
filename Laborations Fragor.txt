@@ -8,3 +8,26 @@ föräldern får  barnets PID.
 - PID: Process ID, unikt nummer för varje process.
 Barnet får retur värdet noll. 
 Det funkar på detta sätt för att föräldrar har ansvar för sina barn och ska veta vem de är. 
+
+4.5
+a)
+När ingen varken föräldrar eller barn skrev ut någonting så hade de samma prioritet. Men
+när enbart barnen utförde en utskrift så resulterade det att föräldern hade högre prioritet.
+Det som vi såg var att gnome-terminal fick direkt en högre CPU användning. När både barnen
+och föräldern utförde utskrifter. 
+
+Vid utskrift så måste terminalen printa ut strängen innan processerna kan fortsätta med sitt
+arbete. Detta leder till att terminalen får högre prioritet då de andra processerna väntar
+på att få sin sträng utskriven, för att kunna gå till nästa instruktion. 
+
+b) 
+Fördelning är mycket rättvis. Både barnen och föräldern sitter på i stort sätt samma CPU
+tid. Alla barn är lika värda. Går att efterlikna kommunism. 
+
+Hypotes
+En konstant sträng kostar mindre än en sträng som ändras varje iteration. Falskt!
+
+
+
+
+
