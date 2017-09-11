@@ -27,7 +27,17 @@ tid. Alla barn är lika värda. Går att efterlikna kommunism.
 Hypotes
 En konstant sträng kostar mindre än en sträng som ändras varje iteration. Falskt!
 
+4.6
+Både föräldern och barnen startar på en prioritet 20. När vi minskar nice värdet vilket 
+ökar prioriteten,på en process så får den en hel kärna för sig själv. Som en sidoeffekt
+så smyger en annan process med och får en egen kärna. Denna process har 20 i prioritet
+men ändå drar lika mycket som en den processen vi prioeriterade. Detta är inte rättvist för
+fem öre. 
 
-
-
-
+Vi kan inte dra någon slutsats om varför detta sker. Det har inget samband med modern eller 
+barn processorna då om man ökar ett barns prioritet så drar den med sig ett barn i prioriteten.
+Det ända som vi kan komma fram till är att om den processen som har en hög prioritet beräknas
+så ofta att den som ligger efter i prioriterings kön körs även lika fort. 
+En annan hypotes är att en process ligger sparat i cache minnet och eftersom den hög prioriterade
+processen måste hämtas så ofta så tar den första bästa nästan kommande process, vilket verkar vara
+samma process varje iteration. 
