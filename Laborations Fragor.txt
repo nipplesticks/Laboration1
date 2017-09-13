@@ -63,4 +63,4 @@ arbeta igen".
 När en process dör så sker det genom att den tar emot en signal. Dessa signaler beror på vad som
 händer i programmet. Vem som skickar signalen kan jag inte svara på just nu. Har processorerna 
 en förälder och barn relation så har föräldern möjlighet att se vilken signal som skickades till 
-
+barnet. Det går bara på detta hållet 
