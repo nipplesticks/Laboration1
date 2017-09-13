@@ -14,15 +14,15 @@ int main(int argc, char** argv)
 	if (nrOfChildren > 0)
 	{
 
-		pid_t pidOfPrinter = fork();
-		if(!pidOfPrinter) execlp("./infinity", "./infinity", "0", NULL);
+		//pid_t pidOfPrinter = fork();
+		//if(!pidOfPrinter) execlp("./infinity", "./infinity", "0", NULL);
 
 
-		for(int i = 0; i < nrOfChildren - 1; i++)
+		for(int i = 0; i < nrOfChildren; i++)
 		{
 			pid_t pid = fork();
 
-			if(!pid) execlp("./infinity", "./infinity",NULL);
+			if(!pid) execlp("./n_infinity", "./n_infinity",NULL);
 		}
 
 

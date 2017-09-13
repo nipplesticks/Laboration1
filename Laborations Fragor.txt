@@ -48,4 +48,7 @@ Dock så fick vi under ett test när modern fick köra klart sin kod så blev al
 köra killall. 
 
 4.8
-
+Barnprocesserna försvinner, och modern ligger kvar efter som den kör en oändlig loop. Det konstiga är dock att NU får de olika
+barnprocesserna olika prioritet. Det skiljer hela 34% på den som har mest processoranvändning jämfört med den som har minst.
+Detta har INTE skett förut utan det har enbart skillt någon %. Den enda ändringen vi gjort är at vi gör en tyngre beräkning
+i while-loopen i barnprocesserna while(time(0) - startTime < 20) jämfört med den simpla while(1).
