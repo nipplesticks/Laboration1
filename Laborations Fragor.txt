@@ -40,4 +40,12 @@ Det ända som vi kan komma fram till är att om den processen som har en hög pr
 så ofta att den som ligger efter i prioriterings kön körs även lika fort. 
 En annan hypotes är att en process ligger sparat i cache minnet och eftersom den hög prioriterade
 processen måste hämtas så ofta så tar den första bästa nästan kommande process, vilket verkar vara
-samma process varje iteration. 
+samma process varje iteration.
+
+4.7
+Alla barn dör typ direkt.
+Dock så fick vi under ett test när modern fick köra klart sin kod så blev alla barnen föräldralösa och det slutade med att vi fick
+köra killall. 
+
+4.8
+
