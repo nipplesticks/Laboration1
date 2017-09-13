@@ -52,3 +52,8 @@ Barnprocesserna försvinner, och modern ligger kvar efter som den kör en oändl
 barnprocesserna olika prioritet. Det skiljer hela 34% på den som har mest processoranvändning jämfört med den som har minst.
 Detta har INTE skett förut utan det har enbart skillt någon %. Den enda ändringen vi gjort är at vi gör en tyngre beräkning
 i while-loopen i barnprocesserna while(time(0) - startTime < 20) jämfört med den simpla while(1).
+
+4.9
+Det som händer är att mother inte ses i TOP längre. Vi tror at den har sagt till processorn "jag vill inte ha
+processorkraft nu tills alla mina barn har gjort klart sitt arbete, efter det vill jag arbeta igen".
+
