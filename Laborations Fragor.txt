@@ -31,7 +31,7 @@ En konstant sträng kostar mindre än en sträng som ändras varje iteration. Fa
 Både föräldern och barnen startar på en prioritet 20. När vi minskar nice värdet vilket 
 ökar prioriteten,på en process så får den en hel kärna för sig själv. Som en sidoeffekt
 så smyger en annan process med och får en egen kärna. Denna process har 20 i prioritet
-men ändå drar lika mycket som en den processen vi prioeriterade. Detta är inte rättvist för
+men ändå drar lika mycket som en den processen vi prioriterade. Detta är inte rättvist för
 fem öre. 
 
 Vi kan inte dra någon slutsats om varför detta sker. Det har inget samband med modern eller 
@@ -44,16 +44,23 @@ samma process varje iteration.
 
 4.7
 Alla barn dör typ direkt.
-Dock så fick vi under ett test när modern fick köra klart sin kod så blev alla barnen föräldralösa och det slutade med att vi fick
-köra killall. 
+Dock så fick vi under ett test när modern fick köra klart sin kod så blev alla barnen föräldralösa
+och det slutade med att vi fick köra killall. 
 
 4.8
-Barnprocesserna försvinner, och modern ligger kvar efter som den kör en oändlig loop. Det konstiga är dock att NU får de olika
-barnprocesserna olika prioritet. Det skiljer hela 34% på den som har mest processoranvändning jämfört med den som har minst.
-Detta har INTE skett förut utan det har enbart skillt någon %. Den enda ändringen vi gjort är at vi gör en tyngre beräkning
-i while-loopen i barnprocesserna while(time(0) - startTime < 20) jämfört med den simpla while(1).
+Barnprocesserna försvinner, och modern ligger kvar efter som den kör en oändlig loop. Det konstiga 
+är dock att NU får de olika barnprocesserna olika prioritet. Det skiljer hela 34% på den som har 
+mest processoranvändning jämfört med den som har minst. Detta har INTE skett förut utan det har 
+enbart skillt någon %. Den enda ändringen vi gjort är at vi gör en tyngre beräkning i while-loopen 
+i barnprocesserna while(time(0) - startTime < 20) jämfört med den simpla while(1).
 
 4.9
-Det som händer är att mother inte ses i TOP längre. Vi tror at den har sagt till processorn "jag vill inte ha
-processorkraft nu tills alla mina barn har gjort klart sitt arbete, efter det vill jag arbeta igen".
+Det som händer är att mother inte ses i TOP längre. Vi tror att den har sagt till processorn "jag 
+vill inte ha processor kraft nu tills alla mina barn har gjort klart sitt arbete, efter det vill jag 
+arbeta igen".
+
+4.10 
+När en process dör så sker det genom att den tar emot en signal. Dessa signaler beror på vad som
+händer i programmet. Vem som skickar signalen kan jag inte svara på just nu. Har processorerna 
+en förälder och barn relation så har föräldern möjlighet att se vilken signal som skickades till 
 
