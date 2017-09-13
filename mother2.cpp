@@ -1,21 +1,33 @@
 #include <unistd.h>
 #include <sys/types.h>
+#include <iostream>
 
 int main(int argc, char** argv)
 {
 
-	int nrOfChildren = 50;
+	int nrOfChildren = 0;
 	double increment = 0;
+	
+	std::cout << "Nr of fork?: ";
+	std::cin >> nrOfChildren;
 
-	for(int i = 0; i < nrOfChildren; i++)
+	if (nrOfChildren > 0)
 	{
-		pid_t pid = fork();
 
-		if(!pid) execlp("./infinity", "./infinity",NULL);
-	}
+		pid_t pidOfPrinter = fork();
+		if(!pidOfPrinter) execlp("./infinity", "./infinity", "0", NULL);
 
 
-	for(;;) increment++;
+		for(int i = 0; i < nrOfChildren - 1; i++)
+		{
+			pid_t pid = fork();
+
+			if(!pid) execlp("./infinity", "./infinity",NULL);
+		}
+
+
+		//for(;;) increment++;
+	}	
 
 	return 0;
 }
